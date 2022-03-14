@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appTheme"
+    tools:context=".SettingActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:fillViewport="true"
+       android:scrollbars="none"
+       android:overScrollMode="never">
+
+      <RelativeLayout
+          android:id="@+id/relParent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/backPressed"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:padding="20dp"
+             android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+         <!--Relative layout to hold brand starts here-->
+         <RelativeLayout
+             android:id="@+id/relFirst"
+             android:layout_width="match_parent"
+             android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/applogo"/>
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/appLogo"
+                android:layout_centerInParent="true"
+                android:textSize="40sp"
+                android:fontFamily="@font/baloo_chettan"
+                android:text="STOCK CRUNCH"
+                android:textColor="@color/appName"/>
+
+            <TextView
+                android:id="@+id/tagLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/appName"
+                android:textSize="22sp"
+                android:fontFamily="@font/baloo_chettan"
+                android:text="Your million-dollar shortcut"
+                android:textColor="@color/black"/>
+
+
+
+         </RelativeLayout>
+         <!--Relative layout to hold brand ends here-->
+
+
+
+         <!--Regards Layout Starts Here-->
+         <LinearLayout
+             android:id="@+id/regards"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/relFirst"
+             android:layout_marginTop="24dp"
+             android:background="@drawable/rectangle_background_below_links"
+             android:padding="12dp"
+             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Regards"
+                   android:fontFamily="sans-serif-condensed-medium"
+                   android:gravity="center_vertical"
+                   android:textColor="@color/headLine" />
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_gravity="center_vertical"
+                   android:layout_margin="3dp"
+                   android:background="#E3E6E9"/>
+
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_priority_high_24"
+                        android:padding="5dp"/>
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="About Us"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/aboutUS"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                  android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                  android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_baseline_share_24"
+                         android:padding="5dp"/>
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="Share this app"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/shareApp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_baseline_star_rate_24"
+                         android:padding="5dp"/>
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="Rate this app"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/rateApp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_baseline_feedback_24"
+                         android:padding="5dp"/>
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="Feedback"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/feedBack"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_baseline_call_24"
+                         android:padding="5dp"/>
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="Contact Us"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/contactWapps"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_baseline_article_24"
+                         android:padding="5dp"/>
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="Terms &amp; Condition"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/termsAndConditions"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_baseline_privacy_tip_24"
+                         android:padding="5dp"/>
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="Privacy"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/privacy"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+         </LinearLayout>
+         <!--Regards Layout Ends Here-->
+
+
+         <!--Social Media Starts Here-->
+
+         <LinearLayout
+             android:id="@+id/socialMedia"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/regards"
+             android:padding="12dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/faceBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/custom_circle">
+
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/facebook"
+                   android:padding="5dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+               android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:id="@+id/instaGram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/custom_circle">
+
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/instagram"
+                   android:padding="5dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/custom_circle">
+
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/twitter"
+                   android:padding="5dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:id="@+id/youTube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/custom_circle">
+
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/youtube"
+                   android:padding="5dp"/>
+
+            </RelativeLayout>
+
+         </LinearLayout>
+
+         <!--Social Media Ends Here-->
+
+
+         <!--App Version Starts Here-->
+         <LinearLayout
+             android:id="@+id/appVersion"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_below="@+id/socialMedia"
+             android:padding="20dp"
+             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock Crunch App Version"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.0 - March 01, 2022"/>
+
+         </LinearLayout>
+         <!--App Version Ends Here-->
+
+
+
+
+      </RelativeLayout>
+
+   </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

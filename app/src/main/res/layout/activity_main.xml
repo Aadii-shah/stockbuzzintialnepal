@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appTheme"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbarshape"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_baseline_settings_24" />
+
+        <ImageView
+            android:id="@+id/contactUs"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/setting"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_baseline_contact_support_24" />
+
+        <TextView
+            android:id="@+id/explore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/languageSection"
+            android:layout_centerHorizontal="true"
+            android:text="Swipe"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/mobile_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/swipeup"
+            app:lottie_repeatCount="3" />
+
+        <LinearLayout
+            android:id="@+id/languageSection"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rectangle_background"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/english"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_background_filled"
+                android:gravity="center"
+                android:text="EN"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/nepali"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="NE" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/recyclerFeed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-8dp" />
+
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFeed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false"
+        app:fastScrollEnabled="false"
+        android:overScrollMode="never"
+        android:isScrollContainer="false"
+
+        />-->
+
+
+    <!--RECYCLERVIEW FOR NEPALIFEED-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/recyclerNepali"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-8dp"
+        android:visibility="gone" />
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNepali"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />-->
+
+   <!-- &lt;!&ndash;below is the view for our shimmer&ndash;&gt;
+   <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="radial">
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+
+</LinearLayout>

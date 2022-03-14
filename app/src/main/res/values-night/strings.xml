@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StockCrunch</string>
+    <string name="aaditya_shah_the_founder_of_this_app_named_stock_buzz_is_a_young_talented_and_enthusiastic_businessman_who_with_the_new_tactics_took_his_business_to_a_new_height_he_started_his_entrepreneurial_journey_at_the_age_of_17">Aaditya Shah, the founder of this app named StockCrunch, is a young, talented, and enthusiastic businessman who with the new tactics took his business to a new height. He started his entrepreneurial Journey at the age of 17.</string>
+    <string name="buzzAim">StockCrunch is dedicated to providing you with Top-quality and Informative Videos about the Share/Stock market of Nepal. We have the objective of building financial discipline in the masses by simplifying Stock Market education and Financial concepts.</string>
+    <string name="appConcept">This application is made for those understudies and experts who need to find out with regards to the securities exchange in the most orderly and pragmatic manner for which no earlier money foundation is required.</string>
+    <string name="ca">‘Investing Essentials &amp; Technical Analysis By CA Sagar Chaudhary’</string>
+    <string name="greetings">Thank You For Using StockCrunch App</string>
+    <string name="help">If you are encountering any issues please get in touch with</string>
+    <string name="supportEmail">support@stockcrunch.xyz</string>
+    <string name="locContact">Imadol, Lalitpur 44705, Nepal</string>
+    <string name="numContact">+9779745552867</string>
+    <string name="gmailContact">stockmarketnepalyco@gmail.com</string>
+    <string name="workGmailcontact">manager@stockcrunch.xyz</string>
+    <string name="share_usContact">share us</string>
+    <string name="rate_usContact">rate us</string>
+    <string name="terms_amp_conditionContact"><![CDATA[Terms & Condition]]></string>
+</resources>
