@@ -567,7 +567,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stock Crunch App Version"
+                android:text="StockCrunch App Version"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
@@ -575,7 +575,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.0 - March 01, 2022"/>
+                android:text="1.0 - March 15, 2022"/>
 
          </LinearLayout>
          <!--App Version Ends Here-->

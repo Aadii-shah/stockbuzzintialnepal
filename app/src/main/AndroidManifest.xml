@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.stockbuzzinitial">
+    package="com.stockcrunch.stockbuzzinitial">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -15,10 +15,10 @@
         android:supportsRtl="false"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Stockbuzzinitial">
-        <activity android:name=".ContactActivity" />
-        <activity android:name=".SettingActivity" />
+        <activity android:name="com.stockcrunch.stockbuzzinitial.ContactActivity" />
+        <activity android:name="com.stockcrunch.stockbuzzinitial.SettingActivity" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.stockcrunch.stockbuzzinitial.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.stockcrunch.stockbuzzinitial.MainActivity">
 
             <!--
             <intent-filter>
@@ -46,7 +46,7 @@
             android:resource="@color/appTheme" />
 
         <service
-            android:name="MessagingService"
+            android:name="com.stockcrunch.stockbuzzinitial.MessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

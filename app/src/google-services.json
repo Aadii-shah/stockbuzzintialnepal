@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:333091359097:android:65db9ba359c9a6397087a8",
         "android_client_info": {
-          "package_name": "com.example.stockbuzzinitial"
+          "package_name": "com.stockcrunch.stockbuzzinitial"
         }
       },
       "oauth_client": [
