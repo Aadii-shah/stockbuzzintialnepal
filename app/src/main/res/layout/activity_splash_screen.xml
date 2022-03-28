@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appTheme"
-    tools:context=".SplashScreenActivity">
+    tools:context=".SplashScreenActivity"
+    tools:ignore="Overdraw">
 
 
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/appName"
@@ -60,7 +60,8 @@
         android:layout_marginBottom="20dp"
         android:src="@drawable/flag"
         android:layout_toEndOf="@id/madeInNepal"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:contentDescription="TODO" />
 
 
 

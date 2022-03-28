@@ -4,11 +4,15 @@
     android:layout_height="match_parent"
     android:background="@color/appTheme">
 
-    <ImageView
-        android:id="@+id/feedImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="TODO" />
+        <ImageView
+            android:id="@+id/feedImageNe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:contentDescription="TODO" />
+
+
+
 
 
 </RelativeLayout>

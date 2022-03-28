@@ -10,7 +10,9 @@ public class FeedModelClass {
         return EN;
     }
 
-    public void setEN(String EN) {
-        this.EN = EN;
-    }
+// --Commented out by Inspection START (29/03/2022, 00:35):
+//    public void setEN(String EN) {
+//        this.EN = EN;
+//    }
+// --Commented out by Inspection STOP (29/03/2022, 00:35)
 }

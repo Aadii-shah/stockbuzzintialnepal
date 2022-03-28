@@ -33,6 +33,7 @@ android {
 
 dependencies {
 
+    implementation fileTree(dir: "libs", include: ["*.aar"])
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
@@ -48,13 +49,15 @@ dependencies {
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:29.1.0')
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    // Declare the dependency for the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'org.jetbrains:annotations:15.0'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-messaging'
-    // depenancy for using facebook shimmer layout.
-    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-core'
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
+
     // Declare the dependencies for any other desired Firebase products
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
     testImplementation 'junit:junit:4.13.2'

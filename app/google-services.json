@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "333091359097",
+    "firebase_url": "https://stockbuzzinitial-default-rtdb.firebaseio.com",
+    "project_id": "stockbuzzinitial",
+    "storage_bucket": "stockbuzzinitial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333091359097:android:65db9ba359c9a6397087a8",
+        "android_client_info": {
+          "package_name": "com.example.stockbuzzinitial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333091359097-8ml9ksl26l5263gq0l1tuc0n94aeu3ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stockbuzzinitial",
+            "certificate_hash": "4fb6210bee4a543eca5487c6e1644ba972b2acf8"
+          }
+        },
+        {
+          "client_id": "333091359097-ukjuaknb70fq5docu5kcjvog9je5b51s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx3MiON0JrDIH9M325Jcjky7VCyMl1y6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333091359097-ukjuaknb70fq5docu5kcjvog9je5b51s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333091359097:android:d0e9dd5e4ebae7887087a8",
+        "android_client_info": {
+          "package_name": "com.example.stockcrunchadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333091359097-u19l0c54r7atc9eq6ar6diflevn64q50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stockcrunchadmin",
+            "certificate_hash": "4fb6210bee4a543eca5487c6e1644ba972b2acf8"
+          }
+        },
+        {
+          "client_id": "333091359097-ukjuaknb70fq5docu5kcjvog9je5b51s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx3MiON0JrDIH9M325Jcjky7VCyMl1y6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333091359097-ukjuaknb70fq5docu5kcjvog9je5b51s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333091359097:android:c4e1902d469daf6e7087a8",
+        "android_client_info": {
+          "package_name": "com.stockcrunch.stockbuzzinitial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333091359097-l2pn7k69g867t79j80q8603uethuaqjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stockcrunch.stockbuzzinitial",
+            "certificate_hash": "4fb6210bee4a543eca5487c6e1644ba972b2acf8"
+          }
+        },
+        {
+          "client_id": "333091359097-ukjuaknb70fq5docu5kcjvog9je5b51s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx3MiON0JrDIH9M325Jcjky7VCyMl1y6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333091359097-ukjuaknb70fq5docu5kcjvog9je5b51s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

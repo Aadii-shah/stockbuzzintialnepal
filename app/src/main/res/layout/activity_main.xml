@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/appTheme"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="Overdraw">
 
     <RelativeLayout
-        android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/toolbarshape"
@@ -33,7 +33,6 @@
             android:src="@drawable/ic_baseline_contact_support_24" />
 
         <TextView
-            android:id="@+id/explore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/languageSection"
@@ -82,17 +81,71 @@
                 android:gravity="center"
                 android:text="NE" />
 
+
+            <TextView
+                android:id="@+id/hindi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="HI" />
+
+
+
         </LinearLayout>
 
 
     </RelativeLayout>
 
 
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">-->
+
+
+    <!--viewPager to hold eng feed data-->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/recyclerFeed"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="-8dp" />
+
+    <!--Viewpager FOR NEPALIFEED-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/recyclerNepali"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-8dp"
+        android:visibility="gone" />
+
+
+    <!--Viewpager FOR NEPALIFEED-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/recyclerHindi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-8dp"
+        android:visibility="gone" />
+
+
+</LinearLayout>
+
+
+    <!--</ScrollView>-->
+
+
+    <!--viewPager to hold eng feed data-->
+    <!--<androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/recyclerFeed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-8dp" />-->
 
 
     <!--<androidx.recyclerview.widget.RecyclerView
@@ -107,13 +160,13 @@
         />-->
 
 
-    <!--RECYCLERVIEW FOR NEPALIFEED-->
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/recyclerNepali"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="-8dp"
-        android:visibility="gone" />
+    <!--Viewpager FOR NEPALIFEED-->
+    <!-- <androidx.viewpager2.widget.ViewPager2
+         android:id="@+id/recyclerNepali"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="-8dp"
+         android:visibility="gone" />-->
 
     <!--<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerNepali"
@@ -121,19 +174,20 @@
         android:layout_height="match_parent"
         />-->
 
-   <!-- &lt;!&ndash;below is the view for our shimmer&ndash;&gt;
-   <com.facebook.shimmer.ShimmerFrameLayout
-        android:id="@+id/shimmerLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:animateLayoutChanges="true"
-        android:animationCache="true"
-        app:shimmer_repeat_mode="restart"
-        app:shimmer_shape="radial">
+    <!-- &lt;!&ndash;below is the view for our shimmer&ndash;&gt;
+    <com.facebook.shimmer.ShimmerFrameLayout
+         android:id="@+id/shimmerLayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:animateLayoutChanges="true"
+         android:animationCache="true"
+         app:shimmer_repeat_mode="restart"
+         app:shimmer_shape="radial">
 
 
 
-    </com.facebook.shimmer.ShimmerFrameLayout>-->
+     </com.facebook.shimmer.ShimmerFrameLayout>-->
 
 
-</LinearLayout>
+    <!--
+    </LinearLayout>-->

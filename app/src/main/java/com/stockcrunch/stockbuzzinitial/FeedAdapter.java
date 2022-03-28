@@ -17,8 +17,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
-    ArrayList<FeedModelClass> feedModelClasses;
-    Context context;
+    final ArrayList<FeedModelClass> feedModelClasses;
+    final Context context;
 
     public FeedAdapter(ArrayList<FeedModelClass> feedModelClasses, Context context) {
         this.feedModelClasses = feedModelClasses;
@@ -62,8 +62,8 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView feedImageView;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        final ImageView feedImageView;
 
         public ViewHolder(@NonNull @NotNull View item) {
             super(item);

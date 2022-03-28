@@ -8,7 +8,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 public class VerticalTransformation implements ViewPager2.PageTransformer {
     private static final float MIN_SCALE = 0.9f;
-    private int version = Build.VERSION.SDK_INT;
+    private final int version = Build.VERSION.SDK_INT;
 
     @Override
     public void transformPage(@NonNull View view, float position) {

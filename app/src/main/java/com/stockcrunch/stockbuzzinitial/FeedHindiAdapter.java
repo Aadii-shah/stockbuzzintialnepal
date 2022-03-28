@@ -1,6 +1,5 @@
 package com.stockcrunch.stockbuzzinitial;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,28 +15,28 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class FeedNepaliAdapter extends RecyclerView.Adapter<FeedNepaliAdapter.ViewHolder> {
-    final ArrayList<FeedModelNepaliClass> feedModelNepaliClasses;
+public class FeedHindiAdapter extends RecyclerView.Adapter<FeedHindiAdapter.ViewHolder> {
+    final ArrayList<FeedModelHindiClass> feedModelHindiClasses;
     final Context context;
 
-    public FeedNepaliAdapter(ArrayList<FeedModelNepaliClass> feedModelNepaliClasses, Context context) {
-        this.feedModelNepaliClasses = feedModelNepaliClasses;
+    public FeedHindiAdapter(ArrayList<FeedModelHindiClass> feedModelHindiClasses, Context context) {
+        this.feedModelHindiClasses = feedModelHindiClasses;
         this.context = context;
     }
 
     @NonNull
     @Override
 
-    public FeedNepaliAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.feed_items_nepali,parent,false);
+    public FeedHindiAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.feed_items_hindi, parent, false);
         return new ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FeedNepaliAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FeedHindiAdapter.ViewHolder holder, int position) {
         //  holder.imageView.setImageResource(mainModels.get(position).getLangLogo());
-        FeedModelNepaliClass feedModelNepaliClass= feedModelNepaliClasses.get(position);
+        FeedModelHindiClass feedModelHindiClass = feedModelHindiClasses.get(position);
         //holder.heading.setText(blogMoreForYouModelClass.getBlogHeading());
         /*Shimmer shimmer = new Shimmer.ColorHighlightBuilder()
                 .setBaseColor(Color.parseColor("#B3B3B3"))
@@ -49,29 +48,27 @@ public class FeedNepaliAdapter extends RecyclerView.Adapter<FeedNepaliAdapter.Vi
         ShimmerDrawable shimmerDrawable = new ShimmerDrawable();
         shimmerDrawable.setShimmer(shimmer);*/
         Glide.with(context)
-                .load(feedModelNepaliClass.getNE())
-               // .placeholder(shimmerDrawable)
+                .load(feedModelHindiClass.getHI())
+                // .placeholder(shimmerDrawable)
                 .placeholder(R.drawable.loading)
                 .error(R.drawable.error)
-                .into(holder.feedImageViewNe);
-
-
+                .into(holder.feedImageViewHi);
 
 
     }
 
     @Override
     public int getItemCount() {
-        return feedModelNepaliClasses.size();
+        return feedModelHindiClasses.size();
     }
 
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        final ImageView feedImageViewNe;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        final ImageView feedImageViewHi;
 
         public ViewHolder(@NonNull @NotNull View item) {
             super(item);
-            feedImageViewNe=item.findViewById(R.id.feedImageNe);
+            feedImageViewHi = item.findViewById(R.id.feedImageHi);
         }
     }
 }

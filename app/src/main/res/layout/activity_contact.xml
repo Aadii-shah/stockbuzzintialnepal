@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appTheme"
-    tools:context=".ContactActivity">
+    tools:context=".ContactActivity"
+    tools:ignore="Overdraw">
 
 
     <!--Relative layout to hold Map starts here-->
@@ -19,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="20dp"
-            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:contentDescription="TODO" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/mobile_view"
@@ -96,7 +98,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -108,7 +111,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_baseline_place_24"
-                            android:padding="5dp"/>
+                            android:padding="5dp"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 
@@ -139,7 +143,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -151,7 +156,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_baseline_call_24"
-                            android:padding="5dp"/>
+                            android:padding="5dp"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 
@@ -181,7 +187,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -193,7 +200,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_baseline_email_24"
-                            android:padding="5dp"/>
+                            android:padding="5dp"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 
@@ -223,7 +231,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -235,7 +244,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_baseline_work_24"
-                            android:padding="5dp"/>
+                            android:padding="5dp"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 

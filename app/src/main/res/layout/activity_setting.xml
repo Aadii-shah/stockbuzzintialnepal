@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appTheme"
-    tools:context=".SettingActivity">
+    tools:context=".SettingActivity"
+    tools:ignore="Overdraw">
 
    <ScrollView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:fillViewport="true"
        android:scrollbars="none"
-       android:overScrollMode="never">
+       android:overScrollMode="never"
+       tools:ignore="UselessParent">
 
       <RelativeLayout
-          android:id="@+id/relParent"
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
 
@@ -24,7 +24,8 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:padding="20dp"
-             android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+             android:src="@drawable/ic_baseline_arrow_back_ios_24"
+             android:contentDescription="TODO" />
 
          <!--Relative layout to hold brand starts here-->
          <RelativeLayout
@@ -37,7 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@drawable/applogo"/>
+                android:src="@drawable/applogo"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/appName"
@@ -129,7 +131,8 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                         android:src="@drawable/ic_baseline_priority_high_24"
-                        android:padding="5dp"/>
+                        android:padding="5dp"
+                         android:contentDescription="TODO" />
 
                   </RelativeLayout>
 
@@ -151,7 +154,8 @@
                    android:layout_height="wrap_content"
                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                    android:layout_centerVertical="true"
-                  android:layout_alignParentEnd="true"/>
+                  android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
 
 
             </RelativeLayout>
@@ -178,7 +182,8 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:src="@drawable/ic_baseline_share_24"
-                         android:padding="5dp"/>
+                         android:padding="5dp"
+                         android:contentDescription="TODO" />
 
                   </RelativeLayout>
 
@@ -200,7 +205,8 @@
                    android:layout_height="wrap_content"
                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                    android:layout_centerVertical="true"
-                   android:layout_alignParentEnd="true"/>
+                   android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
 
 
             </RelativeLayout>
@@ -227,7 +233,8 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:src="@drawable/ic_baseline_star_rate_24"
-                         android:padding="5dp"/>
+                         android:padding="5dp"
+                         android:contentDescription="TODO" />
 
                   </RelativeLayout>
 
@@ -249,7 +256,8 @@
                    android:layout_height="wrap_content"
                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                    android:layout_centerVertical="true"
-                   android:layout_alignParentEnd="true"/>
+                   android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
 
 
             </RelativeLayout>
@@ -276,7 +284,8 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:src="@drawable/ic_baseline_feedback_24"
-                         android:padding="5dp"/>
+                         android:padding="5dp"
+                         android:contentDescription="TODO" />
 
                   </RelativeLayout>
 
@@ -298,7 +307,8 @@
                    android:layout_height="wrap_content"
                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                    android:layout_centerVertical="true"
-                   android:layout_alignParentEnd="true"/>
+                   android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
 
 
             </RelativeLayout>
@@ -325,7 +335,8 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:src="@drawable/ic_baseline_call_24"
-                         android:padding="5dp"/>
+                         android:padding="5dp"
+                         android:contentDescription="TODO" />
 
                   </RelativeLayout>
 
@@ -347,7 +358,8 @@
                    android:layout_height="wrap_content"
                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                    android:layout_centerVertical="true"
-                   android:layout_alignParentEnd="true"/>
+                   android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
 
 
             </RelativeLayout>
@@ -374,7 +386,8 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:src="@drawable/ic_baseline_article_24"
-                         android:padding="5dp"/>
+                         android:padding="5dp"
+                         android:contentDescription="TODO" />
 
                   </RelativeLayout>
 
@@ -396,7 +409,8 @@
                    android:layout_height="wrap_content"
                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                    android:layout_centerVertical="true"
-                   android:layout_alignParentEnd="true"/>
+                   android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
 
 
             </RelativeLayout>
@@ -423,7 +437,8 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:src="@drawable/ic_baseline_privacy_tip_24"
-                         android:padding="5dp"/>
+                         android:padding="5dp"
+                         android:contentDescription="TODO" />
 
                   </RelativeLayout>
 
@@ -445,7 +460,59 @@
                    android:layout_height="wrap_content"
                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                    android:layout_centerVertical="true"
-                   android:layout_alignParentEnd="true"/>
+                   android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:background="@drawable/custom_circle">
+
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_baseline_login_24"
+                         android:padding="5dp"
+                         android:contentDescription="TODO" />
+
+                  </RelativeLayout>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/black"
+                      android:padding="5dp"
+                      android:text="Log Out"
+                      android:clickable="true"
+                      android:focusable="true"/>
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/logOut"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentEnd="true"
+                   android:contentDescription="TODO" />
 
 
             </RelativeLayout>
@@ -482,7 +549,8 @@
                    android:layout_width="30dp"
                    android:layout_height="30dp"
                    android:src="@drawable/facebook"
-                   android:padding="5dp"/>
+                   android:padding="5dp"
+                   android:contentDescription="TODO" />
 
             </RelativeLayout>
 
@@ -503,7 +571,8 @@
                    android:layout_width="30dp"
                    android:layout_height="30dp"
                    android:src="@drawable/instagram"
-                   android:padding="5dp"/>
+                   android:padding="5dp"
+                   android:contentDescription="TODO" />
 
             </RelativeLayout>
 
@@ -524,7 +593,8 @@
                    android:layout_width="30dp"
                    android:layout_height="30dp"
                    android:src="@drawable/twitter"
-                   android:padding="5dp"/>
+                   android:padding="5dp"
+                   android:contentDescription="TODO" />
 
             </RelativeLayout>
 
@@ -545,7 +615,8 @@
                    android:layout_width="30dp"
                    android:layout_height="30dp"
                    android:src="@drawable/youtube"
-                   android:padding="5dp"/>
+                   android:padding="5dp"
+                   android:contentDescription="TODO" />
 
             </RelativeLayout>
 
@@ -556,7 +627,6 @@
 
          <!--App Version Starts Here-->
          <LinearLayout
-             android:id="@+id/appVersion"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_centerHorizontal="true"

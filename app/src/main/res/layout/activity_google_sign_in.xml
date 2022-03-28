@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GoogleSignInActivity"
+    android:orientation="vertical"
+    android:background="@color/appTheme"
+    tools:ignore="Overdraw">
+
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/space"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/applogo"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appLogo"
+        android:layout_centerHorizontal="true"
+        android:textSize="42sp"
+        android:fontFamily="@font/baloo_chettan"
+        android:text="STOCK CRUNCH"
+        android:textColor="@color/appName"/>
+
+    <TextView
+        android:id="@+id/tagLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/appName"
+        android:textSize="24sp"
+        android:fontFamily="@font/baloo_chettan"
+        android:text="Your million-dollar shortcut"
+        android:textColor="@color/black"/>
+
+
+    <Space
+        android:id="@+id/space2nd"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/tagLine"/>
+
+
+
+    <com.shobhitpuri.custombuttons.GoogleSignInButton
+        android:id="@+id/googleSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign in with Google"
+        android:layout_below="@id/space2nd"
+        android:layout_margin="20dp"
+        app:isDarkTheme="true"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logintermsandpolicy"/>
+
+        <TextView
+            android:id="@+id/termsService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms Of Service"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/privacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="Privacy Policy"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

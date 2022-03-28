@@ -12,13 +12,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
-
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SettingActivity extends AppCompatActivity {
 
     private ImageView backPressed;
+    FirebaseAuth mAuth;
 
 
     @Override
@@ -28,135 +28,91 @@ public class SettingActivity extends AppCompatActivity {
         Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
         Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
         Animation bounce = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
+        mAuth = FirebaseAuth.getInstance();
 
         backPressed = findViewById(R.id.backPressed);
-        backPressed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                backPressed.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce));
-                finish();
-                overridePendingTransition(R.anim.slide_up, R.anim.slide_down);
-            }
+        backPressed.setOnClickListener(v -> {
+            backPressed.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce));
+            finish();
+            overridePendingTransition(R.anim.slide_up, R.anim.slide_down);
         });
 
         ImageView aboutUS = findViewById(R.id.aboutUS);
-        aboutUS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BottomSheetDialog sheetDialog = new BottomSheetDialog(SettingActivity.this,
-                        R.style.Theme_Design_BottomSheetDialog);
-                View sheetView = LayoutInflater.from(getApplicationContext()).
-                        inflate(R.layout.aboutus_bottomsheet, (LinearLayout) findViewById(R.id.bottomSheet));
+        aboutUS.setOnClickListener(v -> {
+            BottomSheetDialog sheetDialog = new BottomSheetDialog(SettingActivity.this,
+                    R.style.Theme_Design_BottomSheetDialog);
+            View sheetView = LayoutInflater.from(getApplicationContext()).
+                    inflate(R.layout.aboutus_bottomsheet, (LinearLayout) findViewById(R.id.bottomSheet));
 
-                sheetView.findViewById(R.id.closeSheet).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        sheetDialog.dismiss();
-                    }
-                });
-                sheetView.findViewById(R.id.developerSupport).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                        emailIntent.setType("text/plain");
-                        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"stockmarketnepalyco@gmail.com"}); // recipients
-                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Support/help");
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, "Namaste,");
-                        emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"));
-                        emailIntent.setPackage("com.google.android.gm");
-                        startActivity(emailIntent);*/
+            sheetView.findViewById(R.id.closeSheet).setOnClickListener(v12 -> sheetDialog.dismiss());
+            sheetView.findViewById(R.id.developerSupport).setOnClickListener(v1 -> {
 
-                        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                        emailIntent.setType("text/plain");
-                        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@stockcrunch.xyz"}); // recipients
-                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Support/help");
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, "Namaste,");
-                        startActivity(Intent.createChooser(emailIntent, "Select your Email app"));
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@stockcrunch.xyz"}); // recipients
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Support/help");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Namaste,");
+                startActivity(Intent.createChooser(emailIntent, "Select your Email app"));
 
-                    }
-                });
-                sheetDialog.setContentView(sheetView);
-                sheetDialog.show();
-                
-            }
+            });
+            sheetDialog.setContentView(sheetView);
+            sheetDialog.show();
+
         });
 
         ImageView shareApp = findViewById(R.id.shareApp);
-        shareApp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        shareApp.setOnClickListener(v -> {
 
-                try {
-                    Intent intent = new Intent();
-                    intent.setType("text/plain");
-                    intent.setAction(Intent.ACTION_SEND);
-                    intent.putExtra(Intent.EXTRA_TEXT, "Your million-dollar shortcut!!\n Check out stockCrunch app.\n Made in Nepal🇳🇵");
-                    String shareApp = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
-                    intent.putExtra(Intent.EXTRA_TEXT, shareApp);
-                    startActivity(Intent.createChooser(intent, "SHARE BY"));
-                } catch (Exception e) {
-                    Toast.makeText(SettingActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-
-                }
+            Intent intent = new Intent();
+            intent.setType("text/plain");
+            intent.setAction(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT, "Your million-dollar shortcut!!\n Check out stockCrunch app.\n Made in Nepal🇳🇵\n https://play.google.com/store/apps/details?id=com.stockcrunch.stockbuzzinitial");
+            if (getApplicationContext() != null && intent.resolveActivity(getApplicationContext().getPackageManager()) != null) {
+                startActivity(intent);
             }
         });
 
         ImageView rateApp = findViewById(R.id.rateApp);
-        rateApp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n");
-            }
-        });
+        rateApp.setOnClickListener(v -> gotoUrl("https://play.google.com/store/apps/details?id=com.stockcrunch.stockbuzzinitial"));
 
         ImageView feedBack = findViewById(R.id.feedBack);
-        feedBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setType("text/plain");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"stockmarketnepalyco@gmail.com"}); // recipients
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
-                emailIntent.putExtra(Intent.EXTRA_TEXT, "Namaste,");
-                emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"));
-                emailIntent.setPackage("com.google.android.gm");
-                startActivity(emailIntent);*/
+        feedBack.setOnClickListener(v -> {
 
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setType("text/plain");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"feedback@stockcrunch.xyz"}); // recipients
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Message For General Manager");
-                emailIntent.putExtra(Intent.EXTRA_TEXT, "Namaste,");
-                startActivity(Intent.createChooser(emailIntent, "Select your Email app"));
-            }
+
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            emailIntent.setType("text/plain");
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"feedback@stockcrunch.xyz"}); // recipients
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Message For General Manager");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Namaste,");
+            startActivity(Intent.createChooser(emailIntent, "Select your Email app"));
         });
 
         ImageView contactWapps = findViewById(R.id.contactWapps);
-        contactWapps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=" + "9779745552867" + "&text=" + "Namaste!!");
-                Intent sendIntent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(sendIntent);
+        contactWapps.setOnClickListener(v -> {
+            Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=" + "9779745552867" + "&text=" + "Namaste!!");
+            Intent sendIntent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(sendIntent);
 
-            }
         });
 
         ImageView termsAndConditions = findViewById(R.id.termsAndConditions);
-        termsAndConditions.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://docs.google.com/document/d/1ZsLzM31kmOu6kENDjfku3-OpxYF1l0vEq2f__s_W3TM/edit?usp=sharing");
-            }
-        });
+        termsAndConditions.setOnClickListener(v -> gotoUrl("https://docs.google.com/document/d/1ZsLzM31kmOu6kENDjfku3-OpxYF1l0vEq2f__s_W3TM/edit?usp=sharing"));
 
         ImageView privacy = findViewById(R.id.privacy);
-        privacy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://docs.google.com/document/d/1ZsLzM31kmOu6kENDjfku3-OpxYF1l0vEq2f__s_W3TM/edit?usp=sharing");
-            }
+        privacy.setOnClickListener(v -> gotoUrl("https://docs.google.com/document/d/1ZsLzM31kmOu6kENDjfku3-OpxYF1l0vEq2f__s_W3TM/edit?usp=sharing"));
+
+        ImageView logOut = findViewById(R.id.logOut);
+        logOut.setOnClickListener(v -> {
+            mAuth.signOut();
+            Intent i = new Intent(SettingActivity.this,GoogleSignInActivity.class);
+            i.putExtra("finish", true); // if you are checking for this in your other Activities
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK |
+                    Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
+            finish();
         });
+
 
 
 
@@ -167,36 +123,13 @@ public class SettingActivity extends AppCompatActivity {
         RelativeLayout twitter = findViewById(R.id.twitter);
         RelativeLayout youTube = findViewById(R.id.youTube);
 
-        faceBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://www.facebook.com/stockbuzznepal");
+        faceBook.setOnClickListener(v -> gotoUrl("https://www.facebook.com/stockbuzznepal"));
 
-            }
+        instaGram.setOnClickListener(v -> gotoUrl("https://www.instagram.com/stock_buzz_nepal/"));
 
-        });
+        twitter.setOnClickListener(v -> gotoUrl("https://twitter.com/stockBuzz_app"));
 
-        instaGram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://www.instagram.com/stock_buzz_nepal/");
-
-            }
-        });
-
-        twitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://twitter.com/stockBuzz_app");
-            }
-        });
-
-        youTube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://www.youtube.com/channel/UCfBB3LYFRMsRzmc4e9e8XXg");
-            }
-        });
+        youTube.setOnClickListener(v -> gotoUrl("https://www.youtube.com/channel/UCfBB3LYFRMsRzmc4e9e8XXg"));
 
 
     }
